@@ -1,0 +1,33 @@
+<br/>
+<%= form_tag('/', method: 'get') do |f| %>
+    <%= label_tag(:search, "Search for") %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag('Search') %>
+
+<% end %>
+<br/>
+<% if @recipes.blank? %>
+    <p class="paragraph">No recipes with relevant information.. sorry!</p>
+<% else %>
+
+    <table class="pure-table">
+      <thead>
+      <tr >
+        <th>Image</th>
+        <th>Title</th>
+        <th>Social rank</th>
+      </tr>
+      </thead>
+      <% @recipes.each do |item| %>
+          <tbody>
+          <tr class=<%= cycle('even','odd') %>>
+            <td><%= link_to image_tag(item['image_url'], width:'100px;', height: '100px;'), item['source_url']%></a> </td>
+            <td><%= link_to item['title'].html_safe, item['source_url'] %></td>
+            <td><%= item['social_rank'] %></td>
+          </tr>
+          </tbody>
+      <% end %>
+          </table>
+
+
+<% end %>
