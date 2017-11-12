@@ -1,8 +1,16 @@
-// Place all the styles related to the recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .paragraph {
   align-content: center;
   font-family: "Apple SD Gothic Neo";
+}
+
+#search_form {
+  margin: 0 auto;
+}
+#label_for_search {
+   font-size: 45px;
+   font-family: "Apple SD Gothic Neo";
+
+}
+.navbar navbar-inverse{
+  width: auto;
 }

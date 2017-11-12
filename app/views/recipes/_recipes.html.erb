@@ -1,0 +1,24 @@
+<% if @recipes.blank? %>
+    <p class="paragraph"><strong>No recipes with relevant information.. sorry!</strong></p>
+<% else %>
+<div class="container-fluid">
+   <p>
+    <strong> You're lucky! About <%= @counter %> <%= ('result').pluralize(@counter) %>.</strong>
+  </p>
+  <hr/>
+</div>
+  <% @recipes.each do |item| %>
+      <div class="media">
+        <div class="media-left media-middle">
+            <%= link_to image_tag(item['image_url'], width:'100px;', height: '100px;',class: "media-object"), item['source_url']%>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= link_to item['title'].to_s.html_safe, item['source_url'] %></h4>
+             <p>
+            <strong>  By: </strong> <%= item['publisher'] %>.
+            </p>
+             <label>Social rank:</label> <%= item['social_rank'] %>.
+        </div>
+      </div>
+      <% end %>
+<% end %>

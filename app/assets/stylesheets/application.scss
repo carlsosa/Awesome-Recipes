@@ -1,1 +1,7 @@
+@import "bootstrap-sprockets";
+@import 'bootstrap';
 @import 'recipes';
+
+.navbar-inverse {
+  background-color: #35465c;
+}
