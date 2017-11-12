@@ -10,4 +10,4 @@ Instructions:
 
 * Run bundle
 
-* Heroku: https://awesomerecipe.herokuapp.com/
+* Heroku: https://awesomerecipe.herokuapp.com
